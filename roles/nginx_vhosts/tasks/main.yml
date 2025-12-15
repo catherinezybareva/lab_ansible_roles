@@ -3,7 +3,7 @@
   ansible.builtin.apt:
     update_cache: true
     name: nginx
-    state: latest
+    state: present
 
 - name: Copy nginx config from template
   ansible.builtin.template:
