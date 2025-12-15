@@ -2,15 +2,15 @@
 - name: Install nginx with Virtual Hosts
   hosts: webservers
   remote_user: runner
-  become: true
-  become_method: sudo
+  become: yes
+  become_method: ansible.builtin.sudo
   gather_facts: no
 
   vars:
-    sites:
-    - "etis.com"
-    - "fizfak.com"
-    - "mehmat.ru"
+      sites:
+        - "etis.com"
+        - "fizfak.com"
+        - "mehmat.ru"
 
   roles:
-  - nginx-vhosts
+      - nginx-vhosts

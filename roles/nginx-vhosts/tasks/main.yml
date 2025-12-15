@@ -1,7 +1,7 @@
 ---
 - name: Install nginx
   ansible.builtin.apt:
-    update_cache: True
+    update_cache: true
     name: nginx
     state: latest
 
@@ -15,7 +15,7 @@
   loop: '{{ sites }}'
   notify: restart nginx
 
-- name:
+- name: Place of item
   ansible.builtin.file:
     path: '/var/www/{{ item }}/'
     state: directory
