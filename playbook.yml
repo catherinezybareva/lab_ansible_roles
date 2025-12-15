@@ -8,9 +8,9 @@
 
   vars:
       sites:
-        - "etis.com"
-        - "fizfak.com"
-        - "mehmat.ru"
+          - "etis.com"
+          - "fizfak.com"
+          - "mehmat.ru"
 
   roles:
       - nginx_vhosts
